@@ -1,9 +1,7 @@
-# \[Group name\]
+# \[Michele Scola\]
 
 **Group members:**
-- A
-- B
-- C
+- Michele Scola
 
 This repository contains  
 1. Inaugural project. 
