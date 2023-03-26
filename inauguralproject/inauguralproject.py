@@ -162,6 +162,7 @@ class HouseholdSpecializationModelClass:
         par = self.par
         sol = self.sol
 
+        #solve with contiuous choice set
         if discrete == False:
             for i,wf in enumerate(par.wF_vec):
                 par.wF = wf
@@ -171,6 +172,7 @@ class HouseholdSpecializationModelClass:
                 sol.LM_vec[i] = sol.LM
                 sol.LF_vec[i] = sol.LF
 
+        #solve with discrete choice set
         else:
             for i, wf in enumerate(par.wF_vec):
                 par.wF = wf
@@ -225,3 +227,30 @@ class HouseholdSpecializationModelClass:
         sol.sigma_sol = res.x[1]
         
         return print(f'alpha = {sol.alpha_sol}, sigma = {sol.sigma_sol}')
+    
+    def estimate_5(self, alpha_5):
+        """ estimate sigma with alpha as an input """
+
+        par = self.par
+        sol = self.sol
+
+        #define objective function
+        def obj(x):
+            par.alpha = alpha_5
+            par.sigma = x
+            self.run_regression()
+            return (par.beta0_target-sol.beta0)**2 + (par.beta1_target-sol.beta1)**2
+        
+        #initial guess
+        initial_guess=(0.3)
+
+        #bounds
+        bounds = [(0.01,0.99)]
+
+        #minimizer
+        res = optimize.minimize(obj, initial_guess, method='Nelder-Mead', bounds=bounds)
+
+        #store solutiomns
+        sol.sigma_sol = res.x
+        
+        return print(f'sigma = {sol.sigma_sol}')
