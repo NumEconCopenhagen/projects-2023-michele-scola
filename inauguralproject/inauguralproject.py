@@ -212,10 +212,10 @@ class HouseholdSpecializationModelClass:
             return (par.beta0_target-sol.beta0)**2 + (par.beta1_target-sol.beta1)**2
         
         #initial guess
-        initial_guess=(0.5, 0.9)
+        initial_guess=(0.9, 0.2)
 
         #bounds
-        bounds = ((0.5,0.99),(0.5,0.99))
+        bounds = ((0.01,0.99),(0.01,0.99))
 
         #minimizer
         res = optimize.minimize(obj, initial_guess, method='Nelder-Mead', bounds=bounds)
