@@ -41,7 +41,7 @@ def red_country(inner, country):
     ax = fig.add_subplot(1,1,1)
     I = inner['country'] == country
     ax.scatter(inner.loc[:,'mean'],inner.iloc[:,1143])
-    ax.scatter(inner.loc[I,'mean'],inner.loc[I,'tot_death'], color='r')
+    ax.scatter(inner.loc[I,'mean'],inner.loc[I,'tot_death'], color='r', label=country)
     a, b = np.polyfit(inner.loc[:,'mean'],inner.iloc[:,1143], 1)
     ax.plot(inner.loc[:,'mean'], a*(inner.loc[:,'mean'])+b, color='y', linestyle='-.', label='fitting plot line')
     ax.set_title('covid-19 deaths against hospital beds')
