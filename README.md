@@ -1,9 +1,9 @@
-# \[whr900\]
+# \[michele-scola\]
 
 **Group members:**
-- Michele Scola
+- Michele Scola (whr900)
 
 This repository contains  
 1. Inaugural project. 
-2. Data project. We fetch data from **source x** on **y** and show that ...
-3. Model project. We model ...
+2. Data project. I fetch data from both **worldbank** and **github** on **covid deaths** and **hospital beds** and analyise their correlation.
+3. Model project. The model I implemented is a Stackelberg competition model. I solved the duopoly model both analytically and numerically and inclueded and extension considering 3 firms
