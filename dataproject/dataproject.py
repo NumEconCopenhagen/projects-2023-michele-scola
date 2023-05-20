@@ -54,7 +54,7 @@ def red_country2(inner, country):
     ax = fig.add_subplot(1,1,1)
     I = inner['country'] == country
     ax.scatter(inner.loc[:,'mean'],inner.loc[:,'last'])
-    ax.scatter(inner.loc[I,'mean'],inner.loc[I,'last'], color = 'r')
+    ax.scatter(inner.loc[I,'mean'],inner.loc[I,'last'], color = 'r', label=country)
     a, b = np.polyfit(inner.loc[:,'mean'],inner.loc[:,'last'], 1)
     ax.plot(inner.loc[:,'mean'], a*(inner.loc[:,'mean'])+b, color='y', linestyle='-.', label='fitting plot line')
     ax.set_title('density in 2020 against hospital beds')
