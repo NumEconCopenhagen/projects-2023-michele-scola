@@ -1,0 +1,19 @@
+Feedback I gave during the course:
+
+Inaugural Project:
+SIUUU
+https://github.com/NumEconCopenhagen/projects-2023-siuuu/issues/1
+BULEN
+https://github.com/NumEconCopenhagen/projects-2023-bulen/issues/2
+
+Data Project:
+LEIF
+https://github.com/NumEconCopenhagen/projects-2023-leif/issues/4
+MEJ
+https://github.com/NumEconCopenhagen/projects-2023-mej/issues/5
+
+Model Project:
+JUILIUS-OSKAR
+https://github.com/NumEconCopenhagen/projects-2023-julius-oskar/issues/5
+JT
+https://github.com/NumEconCopenhagen/projects-2023-jt/issues/5
